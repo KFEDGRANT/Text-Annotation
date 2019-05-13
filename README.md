@@ -1,4 +1,4 @@
-# Text-Annotation
+# Text-Annotation-for-AWS-Comprehend
 Generate CSV files for custom entity recognition with AWS Comprehend ML natural language processing
 
 
