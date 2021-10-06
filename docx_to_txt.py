@@ -17,4 +17,4 @@ for filename in os.listdir(rootdir):
         fulltext = getText(filename)
         filename.rsplit('.')
         f = open(filename+".txt","w+", encoding="utf-8")
-        f.write(os.path.join(newdir, fulltext))
+        f.write(os.path.join("path/to/newdir", fulltext))
