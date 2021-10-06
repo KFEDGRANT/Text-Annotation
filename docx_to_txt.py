@@ -1,21 +1,20 @@
-#https://automatetheboringstuff.com/chapter13/
 #write docx file to txt
 
-#pull text from .docx
+import os
+from docx import Document
+
+rootdir = "path/to/dir"
+
 def getText(filename):
-    doc = Document(filename)
+    doc = Document(os.path.join(rootdir, filename))
     fullText = []
     for para in doc.paragraphs:
         fullText.append(para.text)
     return '\n'.join(fullText)
 
-#write text to .txt
-directory = #filepath
-for filename in os.listdir(directory):
+for filename in os.listdir(rootdir):
     if filename.endswith(".docx"):
         fulltext = getText(filename)
         filename.rsplit('.')
-        f = open(filename+".txt","w+")
-        f.write(fulltext)
-    else:
-        continue
+        f = open(filename+".txt","w+", encoding="utf-8")
+        f.write(os.path.join(newdir, fulltext))
